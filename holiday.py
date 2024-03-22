@@ -31,9 +31,12 @@ def plane_cost(city_flight):
         return 0  # Returning 0 if the city is not recognized
 
 
-def car_rental(rental_days_wanted):
-    # Defining cost per day for car rental
-    return rental_days_wanted * 75
+rental_days_input = input("Would you like to rent a car? (yes/no) ").lower()
+
+# Validating car rental preference input
+while rental_days_input not in ['yes', 'no']:
+    print("Please enter either 'yes' or 'no'.")
+    rental_days_input = input("Would you like to rent a car? (yes/no) ").lower()
 
 
 def holiday_cost(city_flight, num_nights, rental_days_input):
